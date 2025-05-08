@@ -10,6 +10,32 @@ Repository = "https://github.com/Irsalistic/comfyui-dam-object-extractor"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
-PublisherId = ""
+PublisherId = "irsalkhan"
 DisplayName = "comfyui-dam-object-extractor"
 Icon = ""
+=======
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "comfyui-dam-object-extractor"
+version = "1.0.0"
+description = "A ComfyUI node that uses NVIDIA's DAM model to identify objects in masked regions"
+authors = [
+    {name = "Irsal Khan", email = "arsalkhan963@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Irsalistic/comfyui-dam-object-extractor"
+"Bug Tracker" = "https://github.com/Irsalistic/comfyui-dam-object-extractor/issues"
+
+[tool.comfy]
+publisher = "@irsalkhan"
