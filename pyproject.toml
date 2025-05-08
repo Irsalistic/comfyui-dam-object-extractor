@@ -1,18 +1,3 @@
-[project]
-name = "dam-object-extractor"
-description = "Extract object names and descriptions from masked regions using NVIDIA's DAM model"
-version = "1.0.0"
-license = {file = "LICENSE"}
-dependencies = ["torch>=2.5.1", "torchvision>=0.20.1", "transformers>=4.51.3", "accelerate>=1.6.0", "numpy>=2.2.5", "pillow>=11.2.1", "opencv-python>=4.11.0", "huggingface-hub>=0.30.2", "safetensors>=0.5.3"]
-
-[project.urls]
-Repository = "https://github.com/Irsalistic/comfyui-dam-object-extractor"
-#  Used by Comfy Registry https://comfyregistry.org
-
-[tool.comfy]
-PublisherId = "irsalkhan"
-DisplayName = "comfyui-dam-object-extractor"
-Icon = ""
 [build-system]
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
@@ -26,10 +11,21 @@ authors = [
 ]
 readme = "README.md"
 requires-python = ">=3.8"
+dependencies = [
+    "torch>=2.5.1",
+    "torchvision>=0.20.1",
+    "transformers>=4.51.3",
+    "accelerate>=1.6.0",
+    "numpy>=2.2.5",
+    "pillow>=11.2.1",
+    "opencv-python>=4.11.0",
+    "huggingface-hub>=0.30.2",
+    "safetensors>=0.5.3"
+]
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
+    "Operating System :: OS Independent"
 ]
 
 [project.urls]
