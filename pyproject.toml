@@ -29,8 +29,8 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/Irsalistic/comfyui-dam-object-extractor"
-"Bug Tracker" = "https://github.com/Irsalistic/comfyui-dam-object-extractor/issues"
+Homepage = "https://github.com/Irsalistic/comfyui-dam-object-extractor"
+BugTracker = "https://github.com/Irsalistic/comfyui-dam-object-extractor/issues"
 
 [tool.comfy]
 publisher = "@irsalkhan"
