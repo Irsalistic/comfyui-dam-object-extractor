@@ -7,7 +7,7 @@ name = "comfyui-dam-object-extractor"
 version = "1.0.0"
 description = "A ComfyUI node that uses NVIDIA's DAM model to identify objects in masked regions"
 authors = [
-    {name = "Irsal Khan", email = "arsalkhan963@gmail.com"}
+    { name = "Irsal Khan", email = "arsalkhan963@gmail.com" }
 ]
 readme = "README.md"
 requires-python = ">=3.8"
