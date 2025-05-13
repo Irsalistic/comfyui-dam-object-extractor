@@ -34,3 +34,4 @@ BugTracker = "https://github.com/Irsalistic/comfyui-dam-object-extractor/issues"
 
 [tool.comfy]
 publisher = "@irsalkhan"
+
