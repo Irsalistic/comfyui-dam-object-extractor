@@ -241,20 +241,22 @@ class DAMVisualizeNode:
             import cv2
             
             # Convert ComfyUI tensor to numpy array
-            if len(image.shape) == 4:
-                image = image[0]  # Take first image if batched
+            # Convert ComfyUI tensor to numpy array
             if isinstance(image, torch.Tensor):
+                if len(image.shape) == 4:
+                    image = image[0]
                 image_np = image.cpu().numpy()
             else:
-                image_np = image
-            
-            # Convert mask to CPU numpy array
+                if len(image.shape) == 4:
+                    image = image[0]
+                image_np = image  # already numpy
+
+            # Same for mask
             if isinstance(mask, torch.Tensor):
                 mask_np = mask.cpu().numpy()
             else:
                 mask_np = mask
 
-            
             # Process the mask to ensure it's 2D
             if len(mask_np.shape) == 3:
                 # This could be either (1, H, W) or (H, W, C)
@@ -302,7 +304,7 @@ class DAMVisualizeNode:
             cv2.drawContours(img_with_contour, contours, -1, contour_color_rgb, thickness=contour_thickness)
             
             # Return as ComfyUI tensor format [B, H, W, C]
-            return (img_with_contour[None, :, :, :],)
+            return (torch.from_numpy(img_with_contour).unsqueeze(0).float(),)
             
         except Exception as e:
             print(f"Error in contour visualization: {str(e)}")
