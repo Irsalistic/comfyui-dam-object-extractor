@@ -4,12 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "comfyui-dam-object-extractor"
-version = "1.0.2"
+version = "1.0.3"
 description = "A ComfyUI node that uses NVIDIA's DAM model to identify objects in masked regions"
 authors = [
     { name = "Irsal Khan", email = "arsalkhan963@gmail.com" }
 ]
 readme = "README.md"
+license = { text = "MIT License" }
 requires-python = ">=3.8"
 dependencies = [
     "torch>=2.5.1",
@@ -31,6 +32,7 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://github.com/Irsalistic/comfyui-dam-object-extractor"
+Repository = "https://github.com/Irsalistic/comfyui-dam-object-extractor"
 BugTracker = "https://github.com/Irsalistic/comfyui-dam-object-extractor/issues"
 
 [tool.comfy]
