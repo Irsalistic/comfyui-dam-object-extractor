@@ -243,10 +243,17 @@ class DAMVisualizeNode:
             # Convert ComfyUI tensor to numpy array
             if len(image.shape) == 4:
                 image = image[0]  # Take first image if batched
-            image_np = image.cpu().numpy()
+            if isinstance(image, torch.Tensor):
+                image_np = image.cpu().numpy()
+            else:
+                image_np = image
             
             # Convert mask to CPU numpy array
-            mask_np = mask.cpu().numpy()
+            if isinstance(mask, torch.Tensor):
+                mask_np = mask.cpu().numpy()
+            else:
+                mask_np = mask
+
             
             # Process the mask to ensure it's 2D
             if len(mask_np.shape) == 3:
