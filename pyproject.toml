@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "comfyui-dam-object-extractor"
-version = "1.0.1"
+version = "1.0.2"
 description = "A ComfyUI node that uses NVIDIA's DAM model to identify objects in masked regions"
 authors = [
     { name = "Irsal Khan", email = "arsalkhan963@gmail.com" }
